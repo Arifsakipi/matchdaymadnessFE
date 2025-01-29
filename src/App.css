@@ -1,0 +1,202 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make sure the container takes up remaining space */
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Set the background image */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('./Images/soccer.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer Styling */
+.footer {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  position: relative;
+}
+
+
+
+
+/* Add spacing between form inputs */
+.mb-3 {
+  margin-bottom: 20px;
+}
+
+/* Style the inputs and buttons */
+input, button {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Input focus effects */
+input:focus {
+  border-color: #5b9bd5;
+  box-shadow: 0 0 10px rgba(91, 155, 213, 0.6);
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #0066cc;
+  cursor: pointer;
+}
+
+/* Text styling */
+h2 {
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Add icons to form labels */
+.fas {
+  margin-right: 8px;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #17a2b8 !important;
+}
+
+.btn-primary {
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+
+:root {
+  --card-bg-color: #f0f4f7;        /* Light grayish background for cards */
+  --card-title-color: #37474f;     /* Darker blue-gray for titles */
+  --card-text-color: #546e7a;      /* Medium blue-gray for text */
+  --accent-color: #00bcd4;        /* Teal/Cyan accent color (you can change this) */
+  --hover-shadow-color: rgba(0, 0, 0, 0.25); /* Shadow color on hover */
+}
+
+/* --- Card Container Styles --- */
+.card {
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: var(--card-bg-color); /* Use the background color variable */
+  border: none;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.04); /* Slightly more zoom on hover */
+  box-shadow: 0 12px 24px var(--hover-shadow-color); /* Use shadow color variable */
+}
+
+
+/* --- Card Title Styles --- */
+.card .card-title {
+  font-size: 2rem; /* Even larger title */
+  color: var(--card-title-color); /* Use title color variable */
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: -0.8px; /* Tighter letter spacing for larger title */
+  /* Optional: Add a subtle underline or accent to the title */
+  /* border-bottom: 2px solid var(--accent-color); */
+  /* padding-bottom: 5px; */
+}
+
+/* --- Card Text Styles --- */
+.card .card-text,
+.card p {
+  font-size: 1.2rem; /* Slightly larger text */
+  color: var(--card-text-color); /* Use text color variable */
+  margin-bottom: 12px;
+  line-height: 1.7; /* More generous line height */
+  font-weight: 400;
+  letter-spacing: -0.02px; /* Slight letter spacing adjustment */
+}
+
+/* --- Style for the first line (e.g., Date) --- */
+.card .card-text:first-of-type,
+.card p:first-of-type {
+  font-weight: 600; /* Stronger font weight for date */
+  color: var(--card-title-color); /* Use title color for date to emphasize */
+}
+
+/* --- Style for Stadium text --- */
+.card .card-text:nth-of-type(2), /* Stadium */
+.card p:nth-of-type(2) {
+  font-style: italic;
+  color: lighten(var(--card-text-color), 10%); /* Lighter shade of text color */
+}
+
+/* --- Style for Result text --- */
+.card .card-text:nth-of-type(3), /* Result */
+.card p:nth-of-type(3) {
+  font-weight: 500; /* Semi-bold for result */
+  color: var(--accent-color); /* Use accent color for result to make it pop */
+}
+
+/* --- Style for Status text --- */
+.card .card-text:nth-of-type(4), /* Status */
+.card p:nth-of-type(4) {
+  font-style: normal; /* Revert to normal style */
+  font-weight: 500; /* Semi-bold for status */
+  color: darken(var(--card-text-color), 15%); /* Darker shade of text color for status */
+}
+
+
+/* --- Button Container within Card --- */
+.card .d-flex.justify-content-center {
+  margin-top: 25px; /* More space above buttons */
+  padding-bottom: 15px;
+}
+
+/* --- Optional: Accent border on top of card --- */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px; 
+  background-color: var(--accent-color);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
